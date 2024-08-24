@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nails by Stacy</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Nails by Stacy</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="appointment.html">Book Appointment</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Appointment Booking Form -->
+        <form id="appointment-form">
+            <h2>Book an Appointment</h2>
+            <input type="date" id="appointment-date" required>
+            <input type="time" id="appointment-time" required>
+            <button type="submit">Book Appointment</button>
+        </form>
+
+        <!-- Loading Spinner -->
+        <div id="loading-spinner" style="display: none;">
+            <p>Loading...</p>
+        </div>
+
+        <!-- Appointment List -->
+        <div id="appointment-list">
+            <h2>Your Appointments</h2>
+            <ul id="appointments">
+                <!-- List of appointments will be inserted here -->
+            </ul>
+        </div>
+        
+        <!-- Logout Button -->
+        <button id="logout-button" style="display: none;">Logout</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nails by Stacy</p>
+    </footer>
+
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<!-- Your scripts -->
+<script src="../scripts/firebase.js"></script>
+<script src="../scripts/main.js"></script>
+</body>
+</html>
+
