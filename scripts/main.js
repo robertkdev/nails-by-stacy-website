@@ -1,3 +1,5 @@
+//main.js
+
 // Function to handle form submissions
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("signup-form").addEventListener("submit", (e) => {

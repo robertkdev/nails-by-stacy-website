@@ -1,20 +1,25 @@
-import { initializeApp } from 'firebase/app';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'firebase/auth';
-import { getFirestore, collection, addDoc, getDocs, query, where } from 'firebase/firestore';
+// firebase.js
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyB2Ld3_-Xr_SQF4lhnsS4AoU_-JfAVUiiI",
-    authDomain: "stacybeautybusiness.firebaseapp.com",
-    projectId: "stacybeautybusiness",
-    storageBucket: "stacybeautybusiness.appspot.com",
-    messagingSenderId: "299817950617",
-    appId: "1:299817950617:web:77988d46199def99538708",
-    measurementId: "G-Z9VG8P3WCJ"
+  apiKey: "AIzaSyB2Ld3_-Xr_SQF4lhnsS4AoU_-JfAVUiiI",
+  authDomain: "stacybeautybusiness.firebaseapp.com",
+  projectId: "stacybeautybusiness",
+  storageBucket: "stacybeautybusiness.appspot.com",
+  messagingSenderId: "299817950617",
+  appId: "1:299817950617:web:77988d46199def99538708",
+  measurementId: "G-Z9VG8P3WCJ"
 };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
+
+export { auth, db };
+
+
 
 // Function to handle form submissions
 document.addEventListener("DOMContentLoaded", () => {

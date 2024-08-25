@@ -1,15 +1,17 @@
+/* style.css */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Lato', sans-serif;
+    background-color: var(--bg-color);
     margin: 0;
     padding: 0;
+    color: var(--text-color);
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
+    background-color: #ffffff;
+    color: var(--text-color);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -17,41 +19,42 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    background-color: #444;
     margin: 0;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 1rem;
 }
 
 nav ul li a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: var(--primary-color);
 }
 
 main {
-    padding: 20px;
+    padding: 2rem;
     text-align: center;
 }
 
 form {
-    margin: 20px auto;
-    padding: 20px;
+    margin: 2rem auto;
+    padding: 2rem;
     background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 400px;
-    display: block; /* Ensure forms are block elements */
 }
 
 form h2 {
-    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
 }
 
 input[type="email"],
@@ -59,58 +62,59 @@ input[type="password"],
 input[type="date"],
 input[type="time"] {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.25rem;
+    font-size: 1rem;
 }
 
 button[type="submit"] {
     width: 100%;
-    padding: 10px;
-    background-color: #333;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
-    background-color: #555;
+    background-color: var(--primary-hover);
 }
 
 #appointment-list {
-    margin-top: 40px;
+    margin-top: 2rem;
     text-align: left;
-    max-width: 400px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
 
 #loading-spinner {
-    margin: 20px auto;
+    margin: 2rem auto;
     display: none;
     text-align: center;
-    color: #333;
+    color: var(--text-color);
 }
 
 footer {
-    background-color: #333;
+    background-color: #2d3748;
     color: white;
-    padding: 10px 0;
+    padding: 1rem 0;
     text-align: center;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
 
 @media (max-width: 600px) {
     header h1, nav ul li a, footer p {
-        font-size: 18px;
+        font-size: 1rem;
     }
 
     form {
-        padding: 15px;
+        padding: 1.5rem;
         max-width: 300px;
     }
 }
